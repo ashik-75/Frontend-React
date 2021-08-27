@@ -1,0 +1,39 @@
+.testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    height: 80%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      height: 70%;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      .top {
+        img {
+          &.left,
+          &.right {
+            height: 25px;
+          }
+          &.center {
+            height: 50px;
+            width: 50px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            margin: 0px 20px;
+          }
+        }
+      }
+    }
+  }
+}

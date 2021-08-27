@@ -1,0 +1,47 @@
+.expandingCard {
+  width: 100%;
+  height: 100vh;
+  background-color: #e7ebfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .card-container {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    padding: 10px;
+    .card {
+      flex: 1;
+      cursor: pointer;
+      border-radius: 50px;
+      margin-right: 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      transition: all 1s ease-in;
+      position: relative;
+      .title {
+        font-size: 25px;
+        position: absolute;
+        bottom: 50px;
+        color: wheat;
+        left: 50px;
+        opacity: 0;
+        @media screen and (max-width: 700px) {
+          font-size: 18px;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        flex: 5;
+        .title {
+          opacity: 1;
+          transition: all 700ms ease-in;
+        }
+        // transition: all 1s ease-in;
+      }
+    }
+  }
+}
